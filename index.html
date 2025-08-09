@@ -1,105 +1,80 @@
 <!DOCTYPE html>
- <html lang="ru">
- <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Каталог товаров</title>
-  <style>
-  body {
-  background-image: url('your-background-image.jpg'); /* Замените на URL вашего фона */
-  background-size: cover;
-  background-repeat: no-repeat;
-  font-family: sans-serif;
-  }
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Карточка товара</title>
+    <style>
+        .product-card {
+            width: 300px; /* Ширина карточки */
+            border-radius: 10px;
+            background-color: #333; /* Тёмно-серый фон */
+            overflow: hidden; /* Обрезаем контент, выходящий за границы */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Небольшая тень */
+            font-family: sans-serif; /* Просто для красоты шрифта */
+        }
 
-  .container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding: 20px;
-  }
+        .product-card img {
+            width: 100%;
+            height: 150px; /* Половина высоты карточки (примерно) */
+            object-fit: cover; /*  Заполняет контейнер, обрезая если нужно */
+        }
 
-  .card {
-  width: 200px;
-  margin: 10px;
-  background-color: #f0f0f0;
-  border-radius: 5px;
-  overflow: hidden;
-  transition: transform 0.3s ease, border 0.3s ease;
-  }
+        .product-info {
+            padding: 15px;
+            text-align: center;
+        }
 
-  .card:hover {
-  transform: scale(1.1);
-  border: 2px solid orange;
-  }
+        .product-title {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #fff; /* Белый цвет текста */
+            margin-bottom: 5px;
+        }
 
-  .card img {
-  width: 100%;
-  height: auto;
-  display: block;
-  }
+        .product-description {
+            font-size: 0.9em;
+            color: #999; /* Серый цвет текста */
+            margin-bottom: 10px;
+        }
 
-  .card button {
-  display: block;
-  width: 100%;
-  padding: 10px;
-  background-color: #4CAF50;
-  color: white;
-  border: none;
-  cursor: pointer;
-  transition: transform 0.2s ease;
-  }
+        .product-price {
+            font-size: 1.4em;
+            font-weight: bold;
+            color: #fff;
+            margin-bottom: 15px;
+        }
 
-  .card button:hover {
-  transform: scale(1.1);
-  }
+        .product-button {
+            background-color: #ffa500; /* Оранжевый цвет */
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: all 0.2s ease-in-out; /* Плавный переход */
+            text-decoration: none; /* Убираем подчеркивание ссылки */
+            display: inline-block; /* Чтобы работали padding и margin */
+        }
 
-  /* Адаптация под мобильные устройства */
-  @media (max-width: 600px) {
-  .card {
-  width: 45%; /* Занимает почти половину ширины экрана */
-  }
-  }
-  </style>
- </head>
- <body>
-  <div class="container">
-  <!-- Карточки товаров (20 штук) -->
-  <!-- Повторите этот блок 20 раз, меняя URL картинки и ссылку на покупку -->
-  <div class="card">
-  <img src="MorlovGames Shop/br25.jpg" alt="Black Russia 2025 [Игра + Форум + Сайт]"> <!-- Замените на URL вашей картинки -->
-  <button onclick="window.location.href='https://example.com/product1'">Купить</button> 
-  <p class="text-primary font-weight-bold">200₽</p> <!-- Замените на URL страницы товара -->
-  </div>
-   <div class="card">
-  <img src="MorlovGames Shop/br25.jpg" alt="Black Russia 2025 [Игра]"> <!-- Замените на URL вашей картинки -->
-  <button onclick="window.location.href='https://example.com/product1'">Купить</button> 
-  <p class="text-primary font-weight-bold">117₽</p> <!-- Замените на URL страницы товара -->
-  </div>
-  <div class="card">
-  <img src="MorlovGames Shop/br25.jpg" alt="Black Russia Pro"> <!-- Замените на URL вашей картинки -->
-  <button onclick="window.location.href='https://example.com/product2'">Купить</button> 
-  <p class="text-primary font-weight-bold">89₽</p> <!-- Замените на URL страницы товара -->
-  </div>
-  <div class="card">
-  <img src="MorlovGames Shop/br25.jpg" alt="BRILLIANT RP"> <!-- Замените на URL вашей картинки -->
-  <button onclick="window.location.href='https://example.com/product4'">Купить</button> 
-   <div class="card">
-  <p class="text-primary font-weight-bold">89₽</p> <!-- Замените на URL страницы товара -->
-  </div>
-  <div class="card">
-  <img src="MorlovGames Shop/br25.jpg" alt="Arizona RP [Игра + Форум + Сайт]">
-  <p class="text-primary font-weight-bold">167₽</p> <!-- Замените на URL вашей картинки -->
-  <button onclick="window.location.href='https://example.com/product6'">Купить</button> <!-- Замените на URL страницы товара -->
-  </div>
-  <div class="card">
-  <img src="MorlovGames Shop/br25.jpg" alt="Arizona RP [Игра]"> 
-  <p class="text-primary font-weight-bold">67₽</p> <!-- Замените на URL вашей картинки -->
-  <button onclick="window.location.href='https://example.com/product7'">Купить</button> <!-- Замените на URL страницы товара -->
-  </div>
-  <div class="card">
-   <!-- Конец карточек товаров -->
-  </div>
- </body>
+        .product-button:hover {
+            background-color: #ff8c00; /* Тёмно-оранжевый цвет */
+            transform: scale(1.1); /* Увеличение при наведении */
+        }
+    </style>
+</head>
+<body>
 
- </html>
+    <div class="product-card">
+        <img src="путь_к_вашей_картинке.jpg" alt="Изображение товара">
+        <div class="product-info">
+            <h2 class="product-title">Название товара</h2>
+            <p class="product-description">Краткое описание товара. Здесь может быть несколько предложений.</p>
+            <p class="product-price">1999 ₽</p>
+            <a href="https://example.com" class="product-button">Подробнее</a>
+        </div>
+    </div>
+
+</body>
+</html>
