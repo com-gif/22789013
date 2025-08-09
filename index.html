@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
@@ -12,6 +11,7 @@
             overflow: hidden; /* Обрезаем контент, выходящий за границы */
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Небольшая тень */
             font-family: sans-serif; /* Просто для красоты шрифта */
+            transition: border 0.3s ease; /* Добавляем плавность для обводки */
         }
 
         .product-card img {
@@ -61,6 +61,11 @@
         .product-button:hover {
             background-color: #ff8c00; /* Тёмно-оранжевый цвет */
             transform: scale(1.1); /* Увеличение при наведении */
+        }
+
+        /* Добавляем стиль для обводки при наведении */
+        .product-card:hover {
+            border: 2px solid orange;
         }
     </style>
 </head>
